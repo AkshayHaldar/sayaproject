@@ -1,0 +1,164 @@
+/* ======== Global Reset ======== */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ======== Navigation Bar ======== */
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: beige;
+    border-radius: 5px;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar List */
+.navbarlist {
+    display: flex;
+}
+
+.navbarlist ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap; /* Allows items to wrap if they don't fit */
+    justify-content: center;
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    white-space: nowrap;
+    scrollbar-width: none; /* Hide scrollbar */
+}
+
+.navbarlist::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on WebKit browsers */
+}
+
+.navbarlist ul li {
+    margin: 0 12px;
+    text-transform: uppercase;
+}
+
+.navbarlist ul li a {
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbarlist ul li a:hover {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+}
+
+/* ======== Menu Toggle Button for Mobile ======== */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* ======== BizTop Logo ======== */
+.biztoplogo {
+    width: 150px;
+}
+
+/* ======== Slider Section ======== */
+.slider-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Slider Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* ======== Responsive Design ======== */
+@media (max-width: 1064px) {
+    .navigation {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+    }
+
+    /* Show the menu toggle button */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    /* Hide the navbar list initially */
+    .navbarlist {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        background: beige;
+        padding: 10px 0;
+    }
+
+    .navbarlist.active {
+        display: flex;
+    }
+
+    .navbarlist ul {
+        flex-direction: column;
+    }
+
+    .navbarlist ul li {
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,125 @@
+/* General Styles */
+#amenities {
+    background: url('/assest/image/gallery-4\ interior\ view.jpg') no-repeat center center/cover;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+}
+
+/* Flexbox for Amenities */
+.amenities-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 100vw;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Heading Styles */
+.container h2 {
+    font-size: 1.8rem;
+    color: #120f0f;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+/* Grid Layout for Cards */
+.overlay-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+/* Overlay (Glass Effect Cards) */
+.overlay {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    min-width: 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Card Styles */
+.card {
+    background: rgba(225, 215, 215, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    max-width: 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card i, .card img {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 8px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #222;
+    font-weight: 600;
+}
+
+/* Card Hover Effects */
+.card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #007bff, #ff5733);
+    color: white;
+}
+
+.card:hover i, .card:hover p {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #amenities {
+        padding: 15px;
+    }
+    .amenities-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container h2 {
+        font-size: 1.5rem;
+    }
+    .overlay-container {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        max-width: 100%;
+    }
+}

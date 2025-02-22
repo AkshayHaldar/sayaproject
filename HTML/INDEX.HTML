@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAYA BIZTOP | full furnished studio apartments</title>
+    <!--------------------- css file--------------- -->
+
+    <link rel="stylesheet" href="/CSS/navbar.css">
+    <link rel="stylesheet" href="/CSS/overview.css">
+    <link rel="stylesheet" href="/CSS/gallery.css">
+    <link rel="stylesheet" href="/CSS/floorplan.css">
+    <link rel="stylesheet" href="/CSS/amenities.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- ============================ -->
+</head>
+
+<body>
+    <header>
+        <div class="navigation">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="/assest/image/saya logo.svg" width="150px" height="100px">
+                </div>
+            </div>
+
+            <!-- Menu Toggle Button -->
+            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+            <div class="navbarlist" id="navbarlist">
+                <ul>
+                    <li class="item"><a href="#overview">overview</a></li>
+                    <li class="item"><a href="#amenities">amenities</a></li>
+                    <li class="item"><a href="#gallery">gallery</a></li>
+                    <li class="item"><a href="#floorplan">floor plan</a></li>
+                    <li class="item"><a href="#locations"">locations</a></li>
+                    <li class=" item"><a href="#contact">contact us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide"><img src="/assest/image/bedroom image.jpg" alt="Slide 1"></div>
+                <div class="slide"><img src="/assest/image/gallery-2 top view.jpg" alt="Slide 2"></div>
+                <div class="slide"><img src="/assest/image/gallery-3 balcony + interior.jpg" alt="Slide 3"></div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </header>
+    <main>
+        <div id="overview">
+            <div class="business-container">
+                <!-- Left Side: Text Content -->
+                <div class="business-info">
+                    <h1>Saya Biztop</h1>
+                    <p>Business suites are definitely the in thing in the fast-paced business world of today. They offer
+                        comfort, class, convenience, and much more to cater to the needs of individuals with impeccable
+                        judgment. Which is why more people are investing in them and ensuring higher returns on their
+                        investment.</p>
+
+                    <p>With Saya Biztop, you can be one of the professionals, businessmen, and entrepreneurs of today.
+                        Saya Biztop offers the perfect blend of ambience and opulence that's next only to a 5-star
+                        hotel. Ideally settled amidst a burgeoning location in Greater Noida West, it is the perfect
+                        investment opportunity of today whose value will only increase tomorrow.</p>
+
+                    <div class="features">
+                        <h2>Key Highlights:</h2>
+                        <ul>
+                            <li><strong>12,000+ sq.m development area:</strong> Boundless prospects for urban
+                                infrastructure development with vast swathes of land spreading over an area of 12,000
+                                sq.m.</li>
+                            <li><strong>5 Lakh+ expected families nearby:</strong> A bustling and growing neighborhood
+                                with an active community of over 5 lakh residents serving as frequent visitors to the
+                                complex.</li>
+                            <li><strong>World-class business suites:</strong> Professional and flexible workspaces
+                                furnished with essential utilities like dedicated desks, private cabins, meeting rooms,
+                                conference halls, and more.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Side: Image -->
+                <div class="business-image">
+                    <img src="/assest/image/gallery-1 proper view.jpg" alt="Saya Biztop Business Suites">
+                </div>
+            </div>
+
+        </div>
+        <div id="amenities">
+            <div class="amenities-box">
+                <div class="container">
+                    <div class="overlay">
+                        <h2>Amenities </h2>
+                        <div class="grid">
+                            <div class="card">
+                                <i class="fas fa-glass-martini"></i>
+                                <p>Bar & Lounge</p>
+                            </div>
+                            <div class="card">
+                                <i class="fas fa-swimmer"></i>
+                                <p>Swimming Pool</p>
+                            </div>
+                            <div class="card">
+                                <i class="fas fa-dumbbell"></i>
+                                <p>Gymnasium</p>
+                            </div>
+                            <div class="card">
+                                <i class="fas fa-utensils"></i>
+                                <p>Dining Restaurant</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="overlay">
+                        <h2>features </h2>
+                        <div class="grid">
+                            <div class="card">
+                                <i class="fas fa-car"></i>
+                                <p>Covered Parking</p>
+                            </div>
+                            <div class="card">
+                                <i class="fa-solid fa-burger"></i>
+                                <p>food court</p>
+                            </div>
+                            <div class="card">
+                                <i class="fas fa-bolt"></i>
+                                <p>24/7 Power Backup</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="overlay">
+                        <h2>connectivity </h2>
+                        <div class="grid">
+                            <div class="card">
+                                <i class="fa-solid fa-road"></i>
+                                <p>NH9 setor 120, noida 0-5min</p>
+                            </div>
+                            <div class="card">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p>crossing Republik 0-5min</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="overlay">
+                        <h2>Security</h2>
+                        <div class="grid">
+                            <div class="card">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <p>3-tier cloud-based security</p>
+                            </div>
+                            <div class="card">
+                                <img src="/assest/amenities img/cctv.png" alt="" width="70px" height="50px">
+                                <p>24*7 cctv </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gallery">
+            <p>Gallery</p>
+            <h1>A Glimpse of Excellence</h1>
+            <div class="gallery-container">
+                <div class="gallery-card">
+                    <img src="/assest/image/ac room.webp" alt="Image 1">
+                </div>
+                <div class="gallery-card">
+                    <img src="/assest/image/bathroom.webp" alt="Image 2">
+                </div>
+                <div class="gallery-card">
+                    <img src="/assest/image/bedroom image.jpg" alt="Image 3">
+                </div>
+                <div class="gallery-card">
+                    <img src="/assest/image/beer.webp" alt="Image 4">
+                </div>
+                <div class="gallery-card">
+                    <img src="/assest/image/gallery-2.jpg" alt="Image 5">
+                </div>
+                <div class="gallery-card">
+                    <img src="/assest/image/gallery-3 balcony + interior.jpg" alt="Image 6">
+                </div>
+            </div>
+        </div>
+        <div id="floorplan">
+            <h1>Floor Plan Layout</h1>
+            <div class="floor_container">
+                <div class="floor_item">
+                    <a href="/assest/floor img/Ground-Floor-Plan.jpg" target="_blank">
+                        <img src="/assest/floor img/Ground-Floor-Plan.jpg" alt="Ground Floor">
+                    </a>
+                    <h3>Ground Floor Plan</h3>
+                </div>
+                <div class="floor_item">
+                    <a href="/assest/floor img/refuse-floor-plan.jpg" target="_blank">
+                        <img src="/assest/floor img/refuse-floor-plan.jpg" alt="Refuse Floor Plan">
+                    </a>
+                    <h3>Refuse Floor Plan</h3>
+                </div>
+                <div class="floor_item">
+                    <a href="/assest/floor img/typical-floor-plan.jpg" target="_blank">
+                        <img src="/assest/floor img/typical-floor-plan.jpg" alt="Typical Floor Plan">
+                    </a>
+                    <h3>Typical Floor Plan</h3>
+                </div>
+                <div class="floor_item">
+                    <a href="/assest/floor img/typical-unit-plan.jpg" target="_blank">
+                        <img src="/assest/floor img/typical-unit-plan.jpg" alt="Typical Unit Plan">
+                    </a>
+                    <h3>Typical Unit Plan</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="locations">
+            <h2>location map</h2>
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe class="gmap_iframe" width="85%" frameborder="0" scrolling="no"
+                        marginheight="0" marginwidth="0"
+                        src="https://maps.google.com/maps?width=795&amp;height=552&amp;hl=en&amp;q=Saya South X&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                        href="https://sprunkin.com/">Sprunki</a></div>
+                <style>
+                    .mapouter {
+                        position: relative;
+                        text-align: center;
+                        width: 100%;
+                        height: 552px;
+                    }
+
+                    .gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                        width: 100%;
+                        height: 552px;
+                    }
+
+                    .gmap_iframe {
+                        height: 552px !important;
+                    }
+                </style>
+            </div>
+        </div>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="#">
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off" required>
+                        <div class="error-txt">Full name can't be blank</div>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="email" placeholder="Email Address" id="email" class="item" autocomplete="off"
+                            required>
+                        <div class="error-txt email">Email can't be blank</div>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="tel" placeholder="Phone Number" id="phone" class="item" autocomplete="off"
+                            required>
+                        <div class="error-txt">Phone number can't be blank</div>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off" required>
+                        <div class="error-txt">Subject can't be blank</div>
+                    </div>
+                </div>
+
+                <div class="textarea-field">
+                    <textarea id="message" cols="30" rows="5" placeholder="Type your message..." class="item"
+                        autocomplete="off" required></textarea>
+                    <div class="error-txt">Message can't be blank</div>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="/server.js"></script>
+    </main>
+
+</body>
+
+<footer>
+    <p>copyright@2025 Biztop at Saya South X Site Map</p>
+</footer>
+
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function moveSlide(step) {
+        currentIndex = (currentIndex + step + totalSlides) % totalSlides;
+        document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function autoSlide() {
+        moveSlide(1);
+    }
+
+    setInterval(autoSlide, 3000);
+
+    // Toggle Menu for Mobile View
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+        document.getElementById("navbarlist").classList.toggle("active");
+    });
+</script>
+
+</html>
