@@ -19,6 +19,66 @@
 </head>
 
 <body>
+    <div id="whatsapp">
+        <a href="https://wa.me/+919310201122" id="toggle1" target="_blank" class="wtsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+    <style type="text/css">
+        #whatsapp .wtsapp {
+            position: fixed;
+            transform: all .5s ease;
+            background-color: #25d366;
+            display: block;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            border-radius: 50px;
+            border-right: none;
+            color: #fff;
+            font-weight: 700;
+            font-size: 30px;
+            bottom: 70px;
+            left: 20px;
+            border: 0;
+            z-index: 9999;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        #whatsapp .wtsapp:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            display: block;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            border-radius: 50%;
+            -webkit-animation: pulse-border 1500ms ease-out infinite;
+            animation: pulse-border 1500ms ease-out infinite;
+        }
+
+        #whatsapp .wtsapp:focus {
+            border: none;
+            outline: none;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
     <header>
         <div class="navigation">
             <div class="navbar">
@@ -113,7 +173,7 @@
                                 <i class="fas fa-utensils"></i>
                                 <p>Dining Restaurant</p>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -230,6 +290,14 @@
                         src="https://maps.google.com/maps?width=795&amp;height=552&amp;hl=en&amp;q=Saya South X&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
                         href="https://sprunkin.com/">Sprunki</a></div>
                 <style>
+                    #locations h2 {
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: #8595d6;
+                        font-size: 45px;
+
+                    }
+
                     .mapouter {
                         position: relative;
                         text-align: center;
@@ -300,7 +368,38 @@
 </body>
 
 <footer>
-    <p>copyright@2025 Biztop at Saya South X Site Map</p>
+    <img src="/assest/image/saya logo.svg" alt="">
+    <div class="footerlist" id="footerlist">
+        <ul>
+            <li class="item"><a href="#overview">overview</a></li>
+            <li class="item"><a href="#amenities">amenities</a></li>
+            <li class="item"><a href="#gallery">gallery</a></li>
+            <li class="item"><a href="#floorplan">floor plan</a></li>
+            <li class="item"><a href="#locations"">locations</a></li>
+            <li class=" item"><a href="#contact">contact us</a></li>
+        </ul>
+    </div>
+    <div class="footer_contact">
+        <div class="item_footer">
+            <i class="fa-solid fa-phone"></i>
+            <a href="https://wa.me/+919310201122" target="_blank">+91-9310201122</a>
+
+
+        </div>
+        <div class="item_footer">
+            <i class="fa-solid fa-location-dot"></i>
+            <p><a
+                    href="https://www.google.com/maps/place/Saya+south+x/@28.601747,77.442694,10876m/data=!3m1!1e3!4m6!3m5!1s0x390cef002c4a0309:0xe155791d66ac42c1!8m2!3d28.6008223!4d77.4344158!16s%2Fg%2F11ltl1rsj2?hl=en&entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D">site
+                    location:saya Southx, Gr.noida</a></p>
+        </div>
+        <div class="item_footer">
+            <i class="fa-solid fa-location-dot"></i>
+            <p><a
+                    href="https://www.google.com/maps/place/Amrapali+RiverView/@28.5936192,77.4309865,680m/data=!3m1!1e3!4m6!3m5!1s0x390cef292028b0c5:0x53895483d0e21512!8m2!3d28.5936145!4d77.4335614!16s%2Fg%2F11tb4hx6sv?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D">Office
+                    location:D-4/101 riverview appartment , amrapali leisure valley</a></p>
+        </div>
+    </div>
+    <p>Copyright@2025 Biztop at Saya South X Site Map</p>
 </footer>
 
 <script>

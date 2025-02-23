@@ -5,7 +5,7 @@ const phone = document.getElementById("phone");
 const subject = document.getElementById("subject");
 const mess = document.getElementById("message");
 // require('dotenv').config();
-emailjs.init("");
+emailjs.init("ShJA5kDWTfppIK_ZG");
 
 function showError(element, message) {
     element.classList.add('error');
@@ -87,7 +87,7 @@ form.addEventListener("submit", (e) => {
 });
 
 function sendEmail() {
-    emailjs.send('', '', {
+    emailjs.send('service_q71cp0h', 'template_ut93dpp', {
         from_name: fullName.value,
         from_email: email.value,
         phone: phone.value,
