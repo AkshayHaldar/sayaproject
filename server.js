@@ -109,3 +109,34 @@ function sendEmail() {
         });
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const popup = document.getElementById('phonePopup');
+    const closeButton = document.querySelector('.close');
+
+    function showPhonePopup() {
+        popup.classList.add('active');
+    }
+    
+    function initPopup() {
+        showPhonePopup();
+        
+        setInterval(showPhonePopup, 30000);
+
+        closeButton.addEventListener('click', () => {
+            popup.classList.remove('active');
+        });
+
+        popup.addEventListener('click', (e) => {
+            if(e.target === popup) {
+                popup.classList.remove('active');
+            }
+        });
+    }
+
+    if(popup && closeButton) {
+        initPopup();
+    } else {
+        console.error('Popup elements not found');
+    }
+});
