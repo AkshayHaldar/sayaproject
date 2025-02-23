@@ -72,7 +72,7 @@ function initEventListeners() {
         });
     });
 
-    phone.addEventListener('input', function(e) {
+    phone.addEventListener('input', function (e) {
         this.value = this.value.replace(/[^0-9-\s]/g, '');
         checkPhone();
     });
@@ -94,18 +94,49 @@ function sendEmail() {
         subject: subject.value,
         message: mess.value
     })
-    .then(() => {
-        Swal.fire({
-            title: "Success!",
-            text: "Message sent successfully!",
-            icon: "success"
+        .then(() => {
+            Swal.fire({
+                title: "Success!",
+                text: "Message sent successfully!",
+                icon: "success"
+            });
+            form.reset();
+        }, (error) => {
+            Swal.fire({
+                title: "Error!",
+                text: "Failed to send message. Please try again.",
+                icon: "error"
+            });
         });
-        form.reset();
-    }, (error) => {
-        Swal.fire({
-            title: "Error!",
-            text: "Failed to send message. Please try again.",
-            icon: "error"
-        });
-    });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const popup = document.getElementById('phonePopup');
+    const closeButton = document.querySelector('.close');
+
+    function showPhonePopup() {
+        popup.classList.add('active');
+    }
+
+    function initPopup() {
+        showPhonePopup();
+
+        setInterval(showPhonePopup, 30000);
+
+        closeButton.addEventListener('click', () => {
+            popup.classList.remove('active');
+        });
+
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.classList.remove('active');
+            }
+        });
+    }
+
+    if (popup && closeButton) {
+        initPopup();
+    } else {
+        console.error('Popup elements not found');
+    }
+});

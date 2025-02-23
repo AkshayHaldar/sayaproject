@@ -104,6 +104,154 @@
     transform: scale(1.1);
 }
 
+.phone-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    z-index: 99999;
+    background: url('/assest/image/ac room.webp') no-repeat center center/cover;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 60vw; /* Adjusted for better responsiveness */
+    height: auto;
+    max-width: 600px; /* Limits width for larger screens */
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-popup.active {
+    display: flex;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-content {
+    position: relative;
+    background: rgba(227, 221, 221, 0.5); /* Increased opacity for better readability */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 70vw;
+}
+
+/* Header Styling */
+h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #222;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 18px;
+    color: #333;
+    font-weight: 720;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    cursor: pointer;
+    font-size: 22px;
+    background: #e74c3c;
+    color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.close:hover {
+    background: #c0392b;
+    transform: scale(1.1);
+}
+
+/* Call Button */
+.call-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 30px;
+    background: #25d366;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.call-button:hover {
+    background: #1da851;
+    transform: scale(1.1);
+}
+
+/* Background Overlay */
+.phone-popup::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.phone-popup.active::before {
+    opacity: 1;
+}
+
+/* Responsive Adjustments for popup */
+@media (max-width: 768px) {
+    .phone-popup {
+        width: 85vw;
+        padding: 20px;
+    }
+
+    .popup-content {
+        max-width: 100%;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .call-button {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+
+    .close {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     #amenities {
