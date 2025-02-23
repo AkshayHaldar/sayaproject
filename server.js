@@ -35,6 +35,22 @@ function checkEmail() {
     }
 }
 
+function checkPhone() {
+    const trimmedValue = phone.value.trim();
+    if (trimmedValue === '') {
+        return true;
+    }
+
+    const phoneNumber = trimmedValue.replace(/\D/g, '');
+    if (phoneNumber.length > 10) {
+        showError(phone, "Phone number cannot exceed 10 digits");
+        return false;
+    } else {
+        clearError(phone);
+        return true;
+    }
+}
+
 function validateForm() {
     let isValid = true;
 
@@ -45,7 +61,7 @@ function validateForm() {
         }
     });
 
-    return isValid && checkEmail();
+    return isValid && checkEmail() && checkPhone();
 }
 
 function initEventListeners() {
@@ -58,15 +74,16 @@ function initEventListeners() {
 
     phone.addEventListener('input', function(e) {
         this.value = this.value.replace(/[^0-9-\s]/g, '');
+        checkPhone();
     });
 }
 initEventListeners();
 
 form.addEventListener("submit", (e) => {
-    console.log("Form submitted");
     e.preventDefault();
     if (!validateForm()) return;
     sendEmail();
+    console.log("Form submitted");
 });
 
 function sendEmail() {
