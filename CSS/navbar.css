@@ -29,20 +29,17 @@ html {
 /* Navbar List */
 .navbarlist {
     display: flex;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 .navbarlist ul {
     display: flex;
     list-style: none;
-    flex-wrap: wrap; /* Allows items to wrap if they don't fit */
+    flex-wrap: wrap;
     justify-content: center;
-    overflow-x: auto; /* Enables horizontal scrolling if needed */
     white-space: nowrap;
-    scrollbar-width: none; /* Hide scrollbar */
-}
-
-.navbarlist::-webkit-scrollbar {
-    display: none; /* Hide scrollbar on WebKit browsers */
+    padding: 0;
 }
 
 .navbarlist ul li {
@@ -55,6 +52,7 @@ html {
     font-weight: bold;
     padding: 10px 15px;
     transition: all 0.3s ease-in-out;
+    display: inline-block;
 }
 
 .navbarlist ul li a:hover {
@@ -76,6 +74,7 @@ html {
 /* ======== BizTop Logo ======== */
 .biztoplogo {
     width: 150px;
+    height: auto;
 }
 
 /* ======== Slider Section ======== */
@@ -96,8 +95,8 @@ html {
 }
 
 .slide img {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -132,7 +131,6 @@ html {
         position: relative;
     }
 
-    /* Show the menu toggle button */
     .menu-toggle {
         display: block;
         position: absolute;
@@ -140,7 +138,6 @@ html {
         top: 20px;
     }
 
-    /* Hide the navbar list initially */
     .navbarlist {
         display: none;
         width: 100%;
@@ -160,5 +157,13 @@ html {
 
     .navbarlist ul li {
         margin: 10px 0;
+    }
+
+    .slider-container {
+        height: 50vh;
+    }
+
+    .slide img {
+        height: 50vh;
     }
 }
