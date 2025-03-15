@@ -4,9 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAYA BIZTOP | full furnished studio apartments</title>
+    <meta name="description" content="SAYA BIZTOP - Premium office spaces and business solutions for professionals">
+    <meta name="keywords" content="office space, business center, coworking, SAYA BIZTOP">
+    <meta name="author" content="SAYA BIZTOP">
+    <meta property="og:title" content="SAYA BIZTOP - Premium Business Center">
+    <meta property="og:description" content="Experience premium office spaces designed for success and productivity">
+    <meta property="og:image" content="images/logo.jpg">
+    <meta property="og:url" content="https://sayabiztop.com">
+    <title>SAYA BIZTOP - Fully Furnished Studio</title>
     <!--------------------- css file--------------- -->
     <link rel="shortcut icon" href="/assest/image/favi-logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/CSS/navbar.css">
     <link rel="stylesheet" href="/CSS/overview.css">
     <link rel="stylesheet" href="/CSS/gallery.css">
@@ -14,102 +24,75 @@
     <link rel="stylesheet" href="/CSS/amenities.css">
     <link rel="stylesheet" href="/CSS/footer.css">
     <link rel="stylesheet" href="/CSS/contact.css">
+    <link rel="stylesheet" href="/CSS/professional.css">
+    <link rel="stylesheet" href="/CSS/animations.css">
+    <link rel="stylesheet" href="/CSS/refinements.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- ============================ -->
 </head>
 
 <body>
     <div id="whatsapp">
-        <a href="https://wa.me/+919310201122" id="toggle1" target="_blank" class="wtsapp">
+        <a href="https://wa.me/+919310201122" id="toggle1" target="_blank" class="whatsapp-btn">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
-    <style type="text/css">
-        #whatsapp .wtsapp {
-            position: fixed;
-            transform: all .5s ease;
-            background-color: #25d366;
-            display: block;
-            text-align: center;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-            border-radius: 50px;
-            border-right: none;
-            color: #fff;
-            font-weight: 700;
-            font-size: 30px;
-            bottom: 70px;
-            left: 20px;
-            border: 0;
-            z-index: 9999;
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-        }
-
-        #whatsapp .wtsapp:before {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            left: 50%;
-            top: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            display: block;
-            width: 60px;
-            height: 60px;
-            background-color: #25d366;
-            border-radius: 50%;
-            -webkit-animation: pulse-border 1500ms ease-out infinite;
-            animation: pulse-border 1500ms ease-out infinite;
-        }
-
-        #whatsapp .wtsapp:focus {
-            border: none;
-            outline: none;
-        }
-
-        @keyframes pulse-border {
-            0% {
-                transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-                opacity: 0;
-            }
-        }
-    </style>
     <header>
         <div class="navigation">
             <div class="navbar">
                 <div class="logo">
-                    <img src="/assest/image/saya logo.svg" width="150px" height="100px">
+                    <a href="INDEX.HTML">
+                        <img src="/assest/image/saya logo.svg" width="150px" height="100px" alt="SAYA BIZTOP">
+                    </a>
                 </div>
             </div>
 
             <!-- Menu Toggle Button -->
-            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
             <div class="navbarlist" id="navbarlist">
                 <ul>
-                    <li class="item"><a href="#overview">overview</a></li>
-                    <li class="item"><a href="#amenities">amenities</a></li>
-                    <li class="item"><a href="#gallery">gallery</a></li>
-                    <li class="item"><a href="#floorplan">floor plan</a></li>
-                    <li class="item"><a href="#locations"">locations</a></li>
-                    <li class=" item"><a href="#contact">contact us</a></li>
+                    <li class="item"><a href="#overview">Overview</a></li>
+                    <li class="item"><a href="#amenities">Amenities</a></li>
+                    <li class="item"><a href="#gallery">Gallery</a></li>
+                    <li class="item"><a href="#floorplan">Floor Plan</a></li>
+                    <li class="item"><a href="#locations">Locations</a></li>
+                    <li class="item"><a href="#contact">Contact Us</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="slider-container">
             <div class="slider">
-                <div class="slide"><img src="/assest/image/bedroom image.jpg" alt="Slide 1"></div>
-                <div class="slide"><img src="/assest/image/gallery-2 top view.jpg" alt="Slide 2"></div>
-                <div class="slide"><img src="/assest/image/gallery-3 balcony + interior.jpg" alt="Slide 3"></div>
+                <div class="slide">
+                    <img src="/assest/image/bedroom image.jpg" alt="Premium Apartment Space">
+                    <div class="slide-content">
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="/assest/image/gallery-2 top view.jpg" alt="Modern Interior Design">
+                    <div class="slide-content">
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="/assest/image/gallery-3 balcony + interior.jpg" alt="Panoramic Views">
+                    </div>
+                </div>
             </div>
             <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
         </div>
     </header>
     <main>
@@ -152,76 +135,112 @@
 
         </div>
         <div id="amenities">
+            <div class="amenities-header">
+                <h2>Premium Amenities & Features</h2>
+                <p>Experience world-class facilities designed for professionals</p>
+            </div>
             <div class="amenities-box">
                 <div class="container">
                     <div class="overlay">
-                        <h2>Amenities </h2>
+                        <h2>Lifestyle Amenities</h2>
                         <div class="grid">
                             <div class="card">
-                                <i class="fas fa-glass-martini"></i>
-                                <p>Bar & Lounge</p>
+                                <div class="icon-container">
+                                    <i class="fas fa-glass-martini"></i>
+                                </div>
+                                <h3>Bar & Lounge</h3>
+                                <p>Unwind in our exclusive lounge with premium beverages and networking opportunities</p>
                             </div>
                             <div class="card">
-                                <i class="fas fa-swimmer"></i>
-                                <p>Swimming Pool</p>
+                                <div class="icon-container">
+                                    <i class="fas fa-swimmer"></i>
+                                </div>
+                                <h3>Swimming Pool</h3>
+                                <p>Relax and rejuvenate in our temperature-controlled swimming pool</p>
                             </div>
                             <div class="card">
-                                <i class="fas fa-dumbbell"></i>
-                                <p>Gymnasium</p>
+                                <div class="icon-container">
+                                    <i class="fas fa-dumbbell"></i>
+                                </div>
+                                <h3>Gymnasium</h3>
+                                <p>State-of-the-art fitness center with modern equipment and personal trainers</p>
                             </div>
                             <div class="card">
-                                <i class="fas fa-utensils"></i>
-                                <p>Dining Restaurant</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="overlay">
-                        <h2>features </h2>
-                        <div class="grid">
-                            <div class="card">
-                                <i class="fas fa-car"></i>
-                                <p>Covered Parking</p>
-                            </div>
-                            <div class="card">
-                                <i class="fa-solid fa-burger"></i>
-                                <p>food court</p>
-                            </div>
-                            <div class="card">
-                                <i class="fas fa-bolt"></i>
-                                <p>24/7 Power Backup</p>
+                                <div class="icon-container">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <h3>Dining Restaurant</h3>
+                                <p>Gourmet dining experience with multi-cuisine options and professional service</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="container">
                     <div class="overlay">
-                        <h2>connectivity </h2>
+                        <h2>Business Features</h2>
                         <div class="grid">
                             <div class="card">
-                                <i class="fa-solid fa-road"></i>
-                                <p>NH9 setor 120, noida 0-5min</p>
+                                <div class="icon-container">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                                <h3>Covered Parking</h3>
+                                <p>Secure, dedicated parking spaces for you and your clients</p>
                             </div>
                             <div class="card">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <p>crossing Republik 0-5min</p>
+                                <div class="icon-container">
+                                    <i class="fa-solid fa-burger"></i>
+                                </div>
+                                <h3>Food Court</h3>
+                                <p>Diverse culinary options to satisfy every palate throughout the workday</p>
+                            </div>
+                            <div class="card">
+                                <div class="icon-container">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <h3>24/7 Power Backup</h3>
+                                <p>Uninterrupted power supply ensuring your business runs smoothly at all times</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="container">
                     <div class="overlay">
-                        <h2>Security</h2>
+                        <h2>Strategic Connectivity</h2>
                         <div class="grid">
                             <div class="card">
-                                <i class="fa-solid fa-shield-halved"></i>
-                                <p>3-tier cloud-based security</p>
+                                <div class="icon-container">
+                                    <i class="fa-solid fa-road"></i>
+                                </div>
+                                <h3>NH9 Proximity</h3>
+                                <p>Just 5 minutes from NH9 and Sector 120, Noida for convenient accessibility</p>
                             </div>
                             <div class="card">
-                                <img src="/assest/amenities img/cctv.png" alt="" width="70px" height="50px">
-                                <p>24*7 cctv </p>
+                                <div class="icon-container">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <h3>Crossing Republik</h3>
+                                <p>5-minute access to Crossing Republik for expanded business opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="overlay">
+                        <h2>Advanced Security</h2>
+                        <div class="grid">
+                            <div class="card">
+                                <div class="icon-container">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                                <h3>3-Tier Security</h3>
+                                <p>Cloud-based security system with multi-layered protection protocols</p>
+                            </div>
+                            <div class="card">
+                                <div class="icon-container">
+                                    <i class="fa-solid fa-video"></i>
+                                </div>
+                                <h3>24/7 CCTV Surveillance</h3>
+                                <p>Round-the-clock monitoring with high-definition security cameras</p>
                             </div>
                         </div>
                     </div>
@@ -253,31 +272,66 @@
             </div>
         </div>
         <div id="floorplan">
-            <h1>Floor Plan Layout</h1>
+            <div class="floorplan-header">
+                <h2>Premium Floor Plans</h2>
+                <p>Discover thoughtfully designed layouts that maximize space efficiency and comfort</p>
+            </div>
             <div class="floor_container">
                 <div class="floor_item">
-                    <a href="/assest/floor img/Ground-Floor-Plan.jpg" target="_blank">
-                        <img src="/assest/floor img/Ground-Floor-Plan.jpg" alt="Ground Floor">
-                    </a>
-                    <h3>Ground Floor Plan</h3>
+                    <div class="floor-image-wrapper">
+                        <a href="/assest/floor img/Ground-Floor-Plan.jpg" target="_blank">
+                            <img src="/assest/floor img/Ground-Floor-Plan.jpg" alt="Ground Floor">
+                            <div class="zoom-icon">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="floor-details">
+                        <h3>Ground Floor Plan</h3>
+                        <p>Featuring reception area, common spaces and premium retail outlets</p>
+                    </div>
                 </div>
                 <div class="floor_item">
-                    <a href="/assest/floor img/refuse-floor-plan.jpg" target="_blank">
-                        <img src="/assest/floor img/refuse-floor-plan.jpg" alt="Refuse Floor Plan">
-                    </a>
-                    <h3>Refuse Floor Plan</h3>
+                    <div class="floor-image-wrapper">
+                        <a href="/assest/floor img/refuse-floor-plan.jpg" target="_blank">
+                            <img src="/assest/floor img/refuse-floor-plan.jpg" alt="Refuse Floor Plan">
+                            <div class="zoom-icon">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="floor-details">
+                        <h3>Refuse Floor Plan</h3>
+                        <p>Optimized layout with essential utilities and maintenance services</p>
+                    </div>
                 </div>
                 <div class="floor_item">
-                    <a href="/assest/floor img/typical-floor-plan.jpg" target="_blank">
-                        <img src="/assest/floor img/typical-floor-plan.jpg" alt="Typical Floor Plan">
-                    </a>
-                    <h3>Typical Floor Plan</h3>
+                    <div class="floor-image-wrapper">
+                        <a href="/assest/floor img/typical-floor-plan.jpg" target="_blank">
+                            <img src="/assest/floor img/typical-floor-plan.jpg" alt="Typical Floor Plan">
+                            <div class="zoom-icon">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="floor-details">
+                        <h3>Typical Floor Plan</h3>
+                        <p>Versatile business suites with multiple configuration options</p>
+                    </div>
                 </div>
                 <div class="floor_item">
-                    <a href="/assest/floor img/typical-unit-plan.jpg" target="_blank">
-                        <img src="/assest/floor img/typical-unit-plan.jpg" alt="Typical Unit Plan">
-                    </a>
-                    <h3>Typical Unit Plan</h3>
+                    <div class="floor-image-wrapper">
+                        <a href="/assest/floor img/typical-unit-plan.jpg" target="_blank">
+                            <img src="/assest/floor img/typical-unit-plan.jpg" alt="Typical Unit Plan">
+                            <div class="zoom-icon">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="floor-details">
+                        <h3>Typical Unit Plan</h3>
+                        <p>Individual business unit layout designed for maximum productivity</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -367,69 +421,285 @@
     <div id="phonePopup" class="phone-popup">
         <div class="popup-content">
             <span class="close">&times;</span>
-            <h3>Contact Us Now!</h3>
-            <p>if you have any inquiry, then contact us</p>
-            <p><i class="fas fa-phone"></i> +91-9310201122</p>
-            <a href="tel:+919310201122" class="call-button">Call Now</a>
+            <h3>Contact Us</h3>
+            <p>Get in touch with our team for inquiries or bookings</p>
+            
+            <div class="popup-flex-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91-9310201122</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@sayagroup.com</span>
+                    </div>
+                    <a href="tel:+919310201122" class="call-button">Call Now</a>
+                </div>
+                
+                <div class="popup-divider"></div>
+                
+                <div class="popup-form">
+                    <form id="popupContactForm">
+                        <div class="form-group">
+                            <input type="text" id="popupName" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="popupEmail" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="popupPhone" placeholder="Your Phone" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="popupMessage" placeholder="Your Message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="popup-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
+    <!-- Add animation script before the closing body tag -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add fade-in class to major sections
+            const sectionsToAnimate = document.querySelectorAll('section');
+            sectionsToAnimate.forEach(section => {
+                section.classList.add('fade-in');
+            });
+            
+            // Observe sections for scrolling into view
+            const fadeInObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            // Observe all elements with fade-in class
+            document.querySelectorAll('.fade-in').forEach(element => {
+                fadeInObserver.observe(element);
+            });
+            
+            // Add btn-pulse class to important call-to-action buttons
+            const importantButtons = document.querySelectorAll('.btn-primary, .cta-button');
+            importantButtons.forEach(button => {
+                button.classList.add('btn-pulse');
+            });
+        });
+    </script>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function moveSlide(step) {
+            currentIndex = (currentIndex + step + totalSlides) % totalSlides;
+            document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function autoSlide() {
+            moveSlide(1);
+        }
+
+        setInterval(autoSlide, 3000);
+
+        // Enhanced Toggle Menu for Mobile View
+        const menuToggle = document.getElementById("menu-toggle");
+        const navbarlist = document.getElementById("navbarlist");
+        
+        menuToggle.addEventListener("click", function () {
+            navbarlist.classList.toggle("active");
+            menuToggle.classList.toggle("active");
+        });
+        
+        // Close menu when clicking outside or on a menu item
+        document.addEventListener("click", function(event) {
+            const isClickInsideMenu = navbarlist.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+            
+            if (!isClickInsideMenu && !isClickOnToggle && navbarlist.classList.contains("active")) {
+                navbarlist.classList.remove("active");
+                menuToggle.classList.remove("active");
+            }
+        });
+        
+        // Close menu when clicking on a menu item (for mobile)
+        const menuItems = document.querySelectorAll(".navbarlist ul li a");
+        menuItems.forEach(item => {
+            item.addEventListener("click", function() {
+                if (window.innerWidth <= 1064) {
+                    navbarlist.classList.remove("active");
+                    menuToggle.classList.remove("active");
+                }
+            });
+        });
+        
+        // Add scroll effect to navbar
+        window.addEventListener("scroll", function() {
+            const navigation = document.querySelector(".navigation");
+            if (window.scrollY > 50) {
+                navigation.classList.add("scrolled");
+            } else {
+                navigation.classList.remove("scrolled");
+            }
+        });
+        
+        // Phone Popup Functionality
+        function showPhonePopup() {
+            const phonePopup = document.getElementById('phonePopup');
+            if (phonePopup) {
+                // Only show the popup if it's not already visible
+                if (phonePopup.style.display !== 'block') {
+                    console.log('Showing popup at: ' + new Date().toLocaleTimeString());
+                    phonePopup.style.display = 'block';
+                }
+            }
+        }
+        
+        // Close the popup when clicking the X
+        const closeBtn = document.querySelector('.close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function() {
+                const phonePopup = document.getElementById('phonePopup');
+                if (phonePopup) {
+                    console.log('Closing popup at: ' + new Date().toLocaleTimeString());
+                    phonePopup.style.display = 'none';
+                    // No longer setting a flag to prevent reappearance
+                }
+            });
+        }
+        
+        // Handle the popup contact form submission
+        const popupContactForm = document.getElementById('popupContactForm');
+        if (popupContactForm) {
+            popupContactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Submit logic here
+                alert('Thank you for your message! We will get back to you soon.');
+                const phonePopup = document.getElementById('phonePopup');
+                if (phonePopup) {
+                    phonePopup.style.display = 'none';
+                    // After submission, prevent popup from showing again
+                    sessionStorage.setItem('formSubmitted', 'true');
+                    console.log('Form submitted, popup will not show again in this session');
+                }
+            });
+        }
+        
+        // Auto-show popup every 30 seconds
+        function autoShowPopup() {
+            try {
+                const formSubmitted = sessionStorage.getItem('formSubmitted');
+                
+                // Only don't show if they've submitted the form
+                if (formSubmitted !== 'true') {
+                    showPhonePopup();
+                } else {
+                    console.log('Form already submitted, not showing popup');
+                }
+            } catch (error) {
+                console.error('Error in autoShowPopup:', error);
+            }
+        }
+        
+        // Initialize popup timer after page loads
+        window.addEventListener('load', function() {
+            try {
+                console.log('Page loaded, popup timer initialized');
+                
+                // Clear formSubmitted flag to ensure popup shows properly
+                // (Optional: remove this line if you want to respect previous form submissions)
+                sessionStorage.removeItem('formSubmitted');
+                
+                // Show popup after 10 seconds for the first time (changed from 30 seconds)
+                setTimeout(function() {
+                    console.log('Initial popup timeout triggered');
+                    autoShowPopup();
+                    
+                    // Then show it every 30 seconds
+                    console.log('Setting up 30-second interval for popups');
+                    const popupInterval = setInterval(autoShowPopup, 30000);
+                    
+                    // Store the interval ID in case we need to clear it later
+                    window.popupIntervalId = popupInterval;
+                }, 10000); // Changed to 10 seconds for faster initial display
+            } catch (error) {
+                console.error('Error setting up popup timer:', error);
+            }
+        });
+    </script>
+
 </body>
 
 <footer>
-    <img src="/assest/image/saya logo.svg" alt="">
-    <div class="footerlist" id="footerlist">
-        <ul>
-            <li class="item"><a href="#overview">overview</a></li>
-            <li class="item"><a href="#amenities">amenities</a></li>
-            <li class="item"><a href="#gallery">gallery</a></li>
-            <li class="item"><a href="#floorplan">floor plan</a></li>
-            <li class="item"><a href="#locations"">locations</a></li>
-            <li class=" item"><a href="#contact">contact us</a></li>
-        </ul>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="/assest/image/saya logo.svg" alt="SAYA BIZTOP Logo">
+        </div>
+        
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#amenities">Amenities</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#floorplan">Floor Plan</a></li>
+                    <li><a href="#locations">Locations</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+919310201122">+91-9310201122</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:sayabiztop.com">sayabiztop@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p><a href="https://www.google.com/maps/place/Saya+south+x/@28.601747,77.442694,10876m/data=!3m1!1e3!4m6!3m5!1s0x390cef002c4a0309:0xe155791d66ac42c1!8m2!3d28.6008223!4d77.4344158!16s%2Fg%2F11ltl1rsj2?hl=en&entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D">Saya Southx, Greater Noida</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-building"></i>
+                    <p><a href="https://www.google.com/maps/place/Amrapali+RiverView/@28.5936192,77.4309865,680m/data=!3m1!1e3!4m6!3m5!1s0x390cef292028b0c5:0x53895483d0e21512!8m2!3d28.5936145!4d77.4335614!16s%2Fg%2F11tb4hx6sv?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D">Office: D-4/101 Riverview Apartment, Amrapali Leisure Valley</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/shrikant-haldar-467133354/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Subscribe to Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SAYA BIZTOP at Saya South X. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Site Map</a>
+            </div>
+        </div>
     </div>
-    <div class="footer_contact">
-        <div class="item_footer">
-            <i class="fa-solid fa-phone"></i>
-            <a href="https://wa.me/+919310201122" target="_blank">+91-9310201122</a>
-
-
-        </div>
-        <div class="item_footer">
-            <i class="fa-solid fa-location-dot"></i>
-            <p><a
-                    href="https://www.google.com/maps/place/Saya+south+x/@28.601747,77.442694,10876m/data=!3m1!1e3!4m6!3m5!1s0x390cef002c4a0309:0xe155791d66ac42c1!8m2!3d28.6008223!4d77.4344158!16s%2Fg%2F11ltl1rsj2?hl=en&entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D">site
-                    location:saya Southx, Gr.noida</a></p>
-        </div>
-        <div class="item_footer">
-            <i class="fa-solid fa-location-dot"></i>
-            <p><a
-                    href="https://www.google.com/maps/place/Amrapali+RiverView/@28.5936192,77.4309865,680m/data=!3m1!1e3!4m6!3m5!1s0x390cef292028b0c5:0x53895483d0e21512!8m2!3d28.5936145!4d77.4335614!16s%2Fg%2F11tb4hx6sv?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D">Office
-                    location:D-4/101 riverview appartment , amrapali leisure valley</a></p>
-        </div>
-    </div>
-    <p>Copyright@2025 Biztop at Saya South X Site Map</p>
 </footer>
-
-<script>
-    let currentIndex = 0;
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
-
-    function moveSlide(step) {
-        currentIndex = (currentIndex + step + totalSlides) % totalSlides;
-        document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    function autoSlide() {
-        moveSlide(1);
-    }
-
-    setInterval(autoSlide, 3000);
-
-    // Toggle Menu for Mobile View
-    document.getElementById("menu-toggle").addEventListener("click", function () {
-        document.getElementById("navbarlist").classList.toggle("active");
-    });
-</script>
 
 </html>

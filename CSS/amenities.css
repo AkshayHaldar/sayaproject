@@ -111,19 +111,19 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
     z-index: 99999;
-    background: url('/assest/image/ac room.webp') no-repeat center center/cover;
-    padding: 40px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('/assest/image/ac room.webp') no-repeat center center/cover;
+    padding: 20px;
     border-radius: 16px;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    width: 60vw; /* Adjusted for better responsiveness */
-    height: auto;
-    max-width: 600px; /* Limits width for larger screens */
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.5), 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 80vw;
+    max-width: 900px;
     opacity: 0;
-    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.5s ease-out;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    backdrop-filter: blur(3px);
 }
 
 .phone-popup.active {
@@ -134,73 +134,283 @@
 
 .popup-content {
     position: relative;
-    background: rgba(227, 221, 221, 0.5); /* Increased opacity for better readability */
+    background: rgba(255, 255, 255, 0.97);
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     width: 100%;
-    max-width: 70vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.popup-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    color: #333;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background-color: rgba(37, 211, 102, 0.05);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background-color: rgba(37, 211, 102, 0.1);
+    transform: translateX(5px);
+}
+
+.contact-item i {
+    color: #25d366;
+    font-size: 18px;
+    width: 24px;
+    background: rgba(37, 211, 102, 0.15);
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover i {
+    background: rgba(37, 211, 102, 0.25);
+    transform: scale(1.1);
+}
+
+.popup-divider {
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, #ddd, transparent);
+}
+
+.popup-form {
+    flex: 1.5;
+}
+
+.form-group {
+    margin-bottom: 14px;
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.popup-error-message {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 5px;
+    padding-left: 2px;
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 10px;
+    background-color: rgba(231, 76, 60, 0.08);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.popup-error-message::before {
+    content: '!';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.form-group input.error-input,
+.form-group textarea.error-input {
+    border-color: #e74c3c;
+    background-color: rgba(231, 76, 60, 0.05);
+    animation: shake 0.5s ease-in-out;
+}
+
+.form-validation-error .popup-content {
+    animation: shake 0.5s ease-in-out;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    border-color: #bdbdbd;
+    background-color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #25d366;
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.15);
+}
+
+.popup-submit {
+    width: 100%;
+    background: linear-gradient(135deg, #25d366, #1ca350);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.popup-submit:hover {
+    background: linear-gradient(135deg, #1da851, #178f44);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+}
+
+.popup-submit:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
 }
 
 /* Header Styling */
-h3 {
-    font-size: 28px;
-    margin-bottom: 15px;
+.phone-popup h3 {
+    font-size: 26px;
+    margin-bottom: 8px;
     color: #222;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.phone-popup h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #25d366, transparent);
+    border-radius: 2px;
 }
 
 /* Paragraph Styling */
-p {
-    font-size: 18px;
-    color: #333;
-    font-weight: 720;
+.phone-popup p {
+    font-size: 16px;
+    color: #666;
     margin-bottom: 12px;
-    line-height: 1.5;
-    text-transform: capitalize;
+    line-height: 1.6;
 }
 
 /* Close Button */
 .close {
     position: absolute;
-    right: -15px;
-    top: -15px;
+    right: -12px;
+    top: -12px;
     cursor: pointer;
-    font-size: 22px;
-    background: #e74c3c;
+    font-size: 18px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
     color: white;
-    width: 35px;
-    height: 35px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
+    z-index: 1;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 .close:hover {
-    background: #c0392b;
-    transform: scale(1.1);
+    background: linear-gradient(135deg, #c0392b, #992d22);
+    transform: rotate(90deg);
 }
 
 /* Call Button */
 .call-button {
     display: inline-block;
-    margin-top: 15px;
-    padding: 14px 30px;
-    background: #25d366;
+    padding: 13px 0;
+    background: linear-gradient(135deg, #25d366, #1ca350);
     color: white;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
     text-decoration: none;
-    border-radius: 10px;
-    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 8px;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.call-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: all 0.6s ease;
 }
 
 .call-button:hover {
-    background: #1da851;
-    transform: scale(1.1);
+    background: linear-gradient(135deg, #1da851, #178f44);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+}
+
+.call-button:hover::before {
+    left: 100%;
+}
+
+.call-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
 }
 
 /* Background Overlay */
@@ -211,7 +421,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     z-index: -1;
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -221,34 +431,142 @@ p {
     opacity: 1;
 }
 
-/* Responsive Adjustments for popup */
+/* Add styling for the confirmation message shown in SweetAlert */
+.confirmation-message {
+    padding: 10px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.confirmation-message p {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.confirmation-message strong {
+    color: #25d366;
+    font-weight: 600;
+}
+
+/* Enhance SweetAlert button styling */
+.swal2-confirm {
+    padding: 12px 30px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    cursor: pointer !important;
+    min-width: 120px !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.swal2-confirm::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: all 0.6s ease;
+}
+
+.swal2-confirm:hover::before {
+    left: 100%;
+}
+
+.swal2-confirm:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+.swal2-confirm:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.swal2-popup {
+    padding: 20px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.swal2-actions {
+    margin-top: 25px !important;
+}
+
+/* Success popup specific styling */
+.swal2-icon.swal2-success {
+    border-color: #25d366 !important;
+    color: #25d366 !important;
+}
+
+.swal2-success-circular-line-left,
+.swal2-success-circular-line-right,
+.swal2-success-fix {
+    background-color: transparent !important;
+}
+
+.swal2-success-ring {
+    border-color: rgba(37, 211, 102, 0.3) !important;
+}
+
+.swal2-title {
+    color: #333 !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+}
+
+/* Responsive Adjustments for popup - keeping dimensions but adjusting styling for different screens */
 @media (max-width: 768px) {
-    .phone-popup {
-        width: 85vw;
+    .popup-content {
         padding: 20px;
     }
-
-    .popup-content {
-        max-width: 100%;
+    
+    .popup-flex-container {
+        flex-direction: column;
     }
-
-    h3 {
-        font-size: 24px;
+    
+    .popup-divider {
+        height: 1px;
+        width: 100%;
+        margin: 10px 0;
     }
-
-    p {
-        font-size: 16px;
+    
+    .contact-item {
+        padding: 6px 8px;
     }
-
+    
+    .contact-item i {
+        height: 32px;
+    }
+    
+    .phone-popup h3 {
+        font-size: 22px;
+    }
+    
+    .phone-popup h3::after {
+        width: 50px;
+    }
+    
     .call-button {
-        padding: 12px 24px;
-        font-size: 18px;
+        padding: 11px 0;
     }
+}
 
-    .close {
-        width: 30px;
-        height: 30px;
-        font-size: 20px;
+@media (max-width: 480px) {
+    .popup-content {
+        padding: 15px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 12px;
+    }
+    
+    .popup-submit, .call-button {
+        font-size: 15px;
     }
 }
 

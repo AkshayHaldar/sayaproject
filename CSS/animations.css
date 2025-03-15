@@ -1,0 +1,103 @@
+/* animations.css - Subtle animations for desktop view only */
+
+/* Only apply these animations on desktop screens */
+@media (min-width: 1065px) {
+    /* Fade in animation for sections */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Subtle hover effects for clickable elements */
+    a:not(.wtsapp), button:not(.menu-toggle) {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    a:not(.wtsapp):hover, button:not(.menu-toggle):hover {
+        transform: translateY(-2px);
+    }
+
+    /* Image hover effects */
+    .business-image img, .gallery-item img {
+        transition: transform 0.5s ease, filter 0.5s ease;
+    }
+
+    .business-image img:hover, .gallery-item img:hover {
+        transform: scale(1.03);
+        filter: brightness(1.05);
+    }
+
+    /* Card hover effects */
+    .card, .amenity-item, .floor-plan-item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover, .amenity-item:hover, .floor-plan-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Smooth scroll for anchors */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Button pulse effect */
+    .btn-pulse {
+        position: relative;
+    }
+
+    .btn-pulse:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: inherit;
+        border-radius: inherit;
+        animation: pulse 2s infinite;
+        z-index: -1;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            opacity: 0.8;
+        }
+        70% {
+            transform: scale(1.1);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1.1);
+            opacity: 0;
+        }
+    }
+}
+
+/* JavaScript to add for these animations */
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    // Fade in elements when they come into view
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const fadeInObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    fadeElements.forEach(element => {
+        fadeInObserver.observe(element);
+    });
+});
+*/ 
