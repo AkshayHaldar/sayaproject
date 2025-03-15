@@ -570,6 +570,94 @@
     }
 }
 
+/* Specific optimization for small mobile devices (412px and under) */
+@media (max-width: 412px) {
+    .phone-popup {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        padding: 8px;
+    }
+    
+    .popup-content {
+        padding: 15px 12px;
+        border-radius: 8px;
+        max-height: 90vh;
+    }
+    
+    .popup-flex-container {
+        gap: 12px;
+        margin-top: 12px;
+    }
+    
+    /* Optimize header and text */
+    .phone-popup h3 {
+        font-size: 18px;
+        margin-bottom: 6px;
+        padding-bottom: 6px;
+    }
+    
+    .phone-popup h3::after {
+        width: 40px;
+        height: 2px;
+    }
+    
+    .phone-popup p {
+        font-size: 13px;
+        margin-bottom: 8px;
+        line-height: 1.4;
+    }
+    
+    /* Optimize form elements */
+    .form-group {
+        margin-bottom: 10px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 8px 10px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+    
+    .popup-submit, .call-button {
+        padding: 10px 0;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+    
+    /* Optimize contact info section */
+    .contact-info {
+        gap: 10px;
+    }
+    
+    .contact-item {
+        font-size: 13px;
+        padding: 5px 8px;
+        gap: 8px;
+    }
+    
+    .contact-item i {
+        font-size: 14px;
+        width: 22px;
+        height: 28px;
+    }
+    
+    /* Optimize close button */
+    .close {
+        right: -8px;
+        top: -8px;
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+    
+    /* Adjust the popup divider */
+    .popup-divider {
+        margin: 5px 0;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     #amenities {
